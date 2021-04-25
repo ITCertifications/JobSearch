@@ -1,0 +1,52 @@
+from difflib import SequenceMatcher
+
+string1 = "Job Description \
+Singtel, Asia leading communications technology group, provides an extensive range of telecommunications and digital services to millions of consumers and businesses across Asia, Australia, Africa and the USA. With over 140 years of innovation behind us, we continue to push boundaries in our networks and services, to enrich lives and transform businesses. \
+Our core values Customer Focus, Challenger Spirit, Teamwork, Integrity, and Personal Excellence shape the way we work. We are passionate about making a difference and have an open and inclusive culture where everyone is empowered to do their best. Our diverse business means you will enjoy unique opportunities and rewarding experiences to learn and grow your career in a dynamic industry. \
+Join us and experience what it's like to be with an Employer of Choice*. Together, let's create a brighter digital future for all. *Awarded at the HR Fest Awards 2020 \
+The role will have to work on the large volume of datasets... with the technical skill on Big Data Platform in data engineering, analytics and using programming or/and tools. The role will have to process the data and work on models to resolve complex business problems. Support business request in data preparation, ad-hoc data query, insight, building data engineering pipeline through system integration, as well as routine Business-As-Usual (BAU) support. He/she possesses a combination of data engineering, data analytical skills as well as experience with algorithms and coding. He/she gets to work with rich and diverse datasets,cutting edge technology, and you get to see the impact of your results in realbusiness and government decisions, which in turn provide positive socialbenefit for consumers at a large scale \
+Responsibilities: Develop data flow, data transformation from data resource system into Big Data platform (Hadoop) Support continuous discovery, data transformation and refactoring towards algorithm build, focused demos and refinement Implement data processing application for data cleansing, mapping, transformation, logging Develop Data Integration workflows and load processes. Design, implement proof-of-concept solutions, create and deploy business intelligence using BI tool. Perform data analysis with the large volume of data for reporting and insights Work on Apache Airflow data pipeline and Apache NiFi Data flow management tool. Collaborate with different stakeholders from business, technical, project management and operation to design and implement the solution. Being a team play to work with different team members and co-operate with other cross functional teams. Ability to lead troubleshooting efforts for complex design and eliminate application issue. Contribute to and help define team best practices around report development, testing, access management, and dashboard refresh scheduling. Ensure best practices, frameworks and re-useable components are employed in the development project Understand Information Security standards, methodologies and practices. Trouble-shoot technical problems faced by the project and operation team. \
+The Ideal Candidate should have/be: Bachelor degree in Computer Science, Math, Data Analytics or related field with at least 2 years of hands-on development experience Certification in Data Engineering or Business Analytics Hands-on experience in Programming language including Java, Python, SQL, prefer to have experience in Big Data application and Linux shell scripting Experience in ETL, Big Data Management, Metadata Management and Data Cataloguing. Experience in data visualisation including effective communication, appropriate chart types, and best practices. Knowledge of Tableau suite or other visualisation/self-service BI tool to create thoughtful visualisation & visual analytics. Knowledge in Big Data Platform such as Hadoop, Cloudera, Hortonworks, etc Experience in Open Source like Apache Airflow, Apache NiFi, Zeppelin Notebook for Data Exploratory Analysis, etc Basic knowledge in Microsoft software e.g. Excel, Word and Power Points. Comfortable to work with technical and non-technical staff to explain concept and algorithms Good knowledge of the ICT trends, data communication and info-communication technology development Be independent and creative in problem solving Willing to work non-office hours and on 24 x 7 hours standby alert for ad-hoc faults on an occasional basis. Good communication skills Must be self-driven, energetic, highly conceptual and analytical coupled with proven business acumen to engage the businesses (internal) and customers (external) to deliver best results solutions for the businesses. Good writing skills in documentation \
+We believe in the strength of a vibrant, diverse and inclusive workforce where backgrounds, perspectives and life experiences of our people help us innovate and create strong connections with our customers. We strive to ensure all our people practices are non-discriminatory and provide a fair, performance-based work culture that is diverse, inclusive and collaborative"
+
+string2 = "Job Description : \
+Singtel, Asia leading communications technology group, provides an extensive range of telecommunications and digital services to millions of consumers and businesses across Asia, Australia, Africa and the USA. With over 140 years of innovation behind us, we continue to push boundaries in our networks and services, to enrich lives and transform businesses. \
+Our core values \u2013 Customer Focus, Challenger Spirit, Teamwork, Integrity, and Personal Excellence \u2013 shape the way we work. We are passionate about making a difference and have an open and inclusive culture where everyone is empowered to do their best. Our diverse business means you will enjoy unique opportunities and rewarding experiences to learn and grow your career in a dynamic industry. \
+Join us and experience what it\u2019s like to be with an Employer of Choice*. Together, let\u2019s create a brighter digital future for all. *Awarded at the HR Fest Awards 2020 \
+The role will have to work on the large volume of datasets... with the technical skill on Big Data Platform in data engineering, analytics and using programming or/and tools. The role will have to process the data and work on models to resolve complex business problems. Support business request in data preparation, ad-hoc data query, insight, building data engineering pipeline through system integration, as well as routine Business-As-Usual (BAU) support. He/she possesses a combination of data engineering, data analytical skills as well as experience with algorithms and coding. He/she gets to work with rich and diverse datasets,cutting edge technology, and you get to see the impact of your results in realbusiness and government decisions, which in turn provide positive socialbenefit for consumers at a large scale \
+Responsibilities: \
+* Develop data flow, data transformation from data resource system into Big Data platform (Hadoop) \
+* Support continuous discovery, data transformation and refactoring towards algorithm build, focused demos and refinement \
+* Implement data processing application for data cleansing, mapping, transformation, logging \
+* Develop Data Integration workflows and load processes. \
+* Design, implement proof-of-concept solutions, create and deploy business intelligence using BI tool. \
+* Perform data analysis with the large volume of data for reporting and insights \
+* Work on Apache Airflow data pipeline and Apache NiFi Data flow management tool. \
+* Collaborate with different stakeholders from business, technical, project management and operation to design and implement the solution. \
+* Being a team play to work with different team members and co-operate with other cross functional teams. \
+* Ability to lead troubleshooting efforts for complex design and eliminate application issue. \
+* Contribute to and help define team best practices around report development, testing, access management, and dashboard refresh scheduling. \
+* Ensure best practices, frameworks and re-useable components are employed in the development project \
+* Understand Information Security standards, methodologies and practices. \
+* Trouble-shoot technical problems faced by the project and operation team. \
+\
+The Ideal Candidate should have/be: \
+* Bachelor degree in Computer Science, Math, Data Analytics or related field with at least 2 years of hands-on development experience \
+* Certification in Data Engineering or Business Analytics \
+* Hands-on experience in Programming language including Java, Python, SQL, prefer to have experience in Big Data application and Linux shell scripting \
+* Experience in ETL, Big Data Management, Metadata Management and Data Cataloguing. \
+* Experience in data visualisation including effective communication, appropriate chart types, and best practices. \
+* Knowledge of Tableau suite or other visualisation/self-service BI tool to create thoughtful visualisation & visual analytics. \
+* Knowledge in Big Data Platform such as Hadoop, Cloudera, Hortonworks, etc\
+* Experience in Open Source like Apache Airflow, Apache NiFi, Zeppelin Notebook for Data Exploratory Analysis, etc \
+* Basic knowledge in Microsoft software e.g. Excel, Word and Power Points. \
+* Comfortable to work with technical and non-technical staff to explain concept and algorithms \
+* Good knowledge of the ICT trends, data communication and info-communication technology development \
+* Be independent and creative in problem solving \
+* Willing to work non-office hours and on 24 x 7 hours standby alert for ad-hoc faults on an occasional basis. \
+* Good communication skills \
+* Must be self-driven, energetic, highly conceptual and analytical coupled with proven business acumen to engage the businesses (internal) and customers (external) to deliver best results solutions for the businesses. \
+* Good writing skills in documentation \
+We believe in the strength of a vibrant, diverse and inclusive workforce where backgrounds, perspectives and life experiences of our people help us innovate and create strong connections with our customers. We strive to ensure all our people practices are non-discriminatory and provide a fair, performance-based work culture that is diverse, inclusive and collaborative"
+
+print(SequenceMatcher(None, string1, string2).ratio())
