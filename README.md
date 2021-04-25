@@ -3,7 +3,7 @@
 This project searches Google Job Search engine for mentions of IT certifications in the job postings.
 
 ## Subfolders
-data - Contains the job postings for the roles of software de-veloper”, ”system analyst”, ”IT analyst”, ”software engineer”,”solution  architect”,  ”project  manager”,  ”product manager”,”programmer”,  ”consultant”,  ”data  analyst”  and  ”data  scientist”.
+data - Contains the job postings for the roles of software developer”, ”system analyst”, ”IT analyst”, ”software engineer”,”solution  architect”,  ”project  manager”,  ”product manager”,”programmer”,  ”consultant”,  ”data  analyst”  and  ”data  scientist”.
 
 data_results - Contains the processed results in json and html files.
 
