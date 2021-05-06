@@ -88,34 +88,38 @@ writeFile(data_combined_all_hascert, filename_combined_all_hascert)
 data_combined_all_hascert = loadfile(filename_combined_all_hascert)
 print("Size of data_combined_all_hascert : " + str(len(data_combined_all_hascert)))
 
-# we then remove duplicates of jobs and write into data_combined_all_hascert_nodup
-data_combined_all_hascert_nodup = []
-data_combined_all_hascert_nodup_temp = []
-for i in data_combined_all_hascert:
-    if i not in data_combined_all_hascert_nodup_temp:
-        data_combined_all_hascert_nodup_temp.append(i)
-print("Length of nodup temp: " + str(len(data_combined_all_hascert_nodup_temp)))        
+# comment out below if you wish to remove duplicates
+data_combined_all_hascert_nodup = data_combined_all_hascert
 
-count = 0
-for i in data_combined_all_hascert_nodup_temp:
-    count = count + 1
-    print(count)
-    if len(data_combined_all_hascert_nodup) > 0:
-        first = i['description']
-        found = False
-        for x in data_combined_all_hascert_nodup:
-            second = x['description']
-            ratio = SequenceMatcher(None, first, second).ratio() 
-            if ratio > 0.95:
-                found = True
-                print("same **************" + str(ratio))
-                break
-                # print("first *************" + first)    
-                # print("second *************" + second)    
-        if not found:
-                data_combined_all_hascert_nodup.append(i)
-    else:
-        data_combined_all_hascert_nodup.append(i)
+# uncomment below to remove duplicates.
+# we then remove duplicates of jobs and write into data_combined_all_hascert_nodup
+# data_combined_all_hascert_nodup = []
+# data_combined_all_hascert_nodup_temp = []
+# for i in data_combined_all_hascert:
+#     if i not in data_combined_all_hascert_nodup_temp:
+#         data_combined_all_hascert_nodup_temp.append(i)
+# print("Length of nodup temp: " + str(len(data_combined_all_hascert_nodup_temp)))        
+
+# count = 0
+# for i in data_combined_all_hascert_nodup_temp:
+#     count = count + 1
+#     print(count)
+#     if len(data_combined_all_hascert_nodup) > 0:
+#         first = i['description']
+#         found = False
+#         for x in data_combined_all_hascert_nodup:
+#             second = x['description']
+#             ratio = SequenceMatcher(None, first, second).ratio() 
+#             if ratio > 0.95:
+#                 found = True
+#                 print("same **************" + str(ratio))
+#                 break
+#                 # print("first *************" + first)    
+#                 # print("second *************" + second)    
+#         if not found:
+#                 data_combined_all_hascert_nodup.append(i)
+#     else:
+#         data_combined_all_hascert_nodup.append(i)
 
 writeFile(data_combined_all_hascert_nodup, filename_combined_all_hascert_nodup)
 
